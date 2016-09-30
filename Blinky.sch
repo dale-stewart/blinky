@@ -1,0 +1,191 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:blinky
+LIBS:Blinky-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L 7555 U1
+U 1 1 57E877F1
+P 5750 4000
+F 0 "U1" H 6125 3525 60  0000 C CNN
+F 1 "7555" H 6175 3425 60  0000 C CNN
+F 2 "Housings_SOIC:SOIC-8_3.9x4.9mm_Pitch1.27mm" H 5775 3700 60  0001 C CNN
+F 3 "" H 5775 3700 60  0001 C CNN
+	1    5750 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R1
+U 1 1 57E89310
+P 4900 3600
+F 0 "R1" V 4980 3600 50  0000 C CNN
+F 1 "1K" V 4900 3600 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 4830 3600 50  0001 C CNN
+F 3 "" H 4900 3600 50  0000 C CNN
+	1    4900 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R2
+U 1 1 57E89351
+P 4900 4100
+F 0 "R2" V 4980 4100 50  0000 C CNN
+F 1 "470K" V 4900 4100 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 4830 4100 50  0001 C CNN
+F 3 "" H 4900 4100 50  0000 C CNN
+	1    4900 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C1
+U 1 1 57E8937B
+P 4900 4600
+F 0 "C1" H 4925 4700 50  0000 L CNN
+F 1 "1U" H 4925 4500 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1206_HandSoldering" H 4938 4450 50  0001 C CNN
+F 3 "" H 4900 4600 50  0000 C CNN
+	1    4900 4600
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R3
+U 1 1 57E893A4
+P 6400 4100
+F 0 "R3" V 6480 4100 50  0000 C CNN
+F 1 "1K" V 6400 4100 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 6330 4100 50  0001 C CNN
+F 3 "" H 6400 4100 50  0000 C CNN
+	1    6400 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED D1
+U 1 1 57E893E4
+P 6400 4625
+F 0 "D1" H 6400 4725 50  0000 C CNN
+F 1 "LED" H 6400 4525 50  0000 C CNN
+F 2 "LEDs:LED_0805" H 6400 4625 50  0001 C CNN
+F 3 "" H 6400 4625 50  0000 C CNN
+	1    6400 4625
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5150 3925 4900 3925
+Wire Wire Line
+	4900 3750 4900 3950
+Connection ~ 4900 3925
+Wire Wire Line
+	5150 4050 5150 4375
+Connection ~ 5150 4175
+Wire Wire Line
+	4900 4250 4900 4450
+Wire Wire Line
+	5150 4375 4900 4375
+Connection ~ 4900 4375
+Wire Wire Line
+	4900 4750 4900 4825
+Wire Wire Line
+	4900 4825 6400 4825
+Wire Wire Line
+	5675 4825 5675 4600
+Connection ~ 5675 4825
+Wire Wire Line
+	6400 4250 6400 4425
+Wire Wire Line
+	6300 3925 6400 3925
+Wire Wire Line
+	6400 3925 6400 3950
+Wire Wire Line
+	4900 3350 5800 3350
+Wire Wire Line
+	4900 3350 4900 3450
+Connection ~ 5675 3350
+Text Label 5075 3350 0    60   ~ 0
+VDD
+$Comp
+L GND #PWR01
+U 1 1 57E895BF
+P 5350 5150
+F 0 "#PWR01" H 5350 4900 50  0001 C CNN
+F 1 "GND" H 5350 5000 50  0000 C CNN
+F 2 "" H 5350 5150 50  0000 C CNN
+F 3 "" H 5350 5150 50  0000 C CNN
+	1    5350 5150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5350 5150 5350 4825
+Connection ~ 5350 4825
+$Comp
+L Battery BT1
+U 1 1 57E89778
+P 4125 4075
+F 0 "BT1" H 4225 4125 50  0000 L CNN
+F 1 "Battery" H 4225 4025 50  0000 L CNN
+F 2 "blinky:S8211R" V 4125 4115 50  0001 C CNN
+F 3 "" V 4125 4115 50  0000 C CNN
+	1    4125 4075
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4125 3925 4125 3525
+Wire Wire Line
+	4125 3525 4400 3525
+Wire Wire Line
+	4125 4225 4125 4650
+$Comp
+L GND #PWR02
+U 1 1 57E897F6
+P 4125 4650
+F 0 "#PWR02" H 4125 4400 50  0001 C CNN
+F 1 "GND" H 4125 4500 50  0000 C CNN
+F 2 "" H 4125 4650 50  0000 C CNN
+F 3 "" H 4125 4650 50  0000 C CNN
+	1    4125 4650
+	1    0    0    -1  
+$EndComp
+Text Label 4400 3525 2    60   ~ 0
+VDD
+NoConn ~ 5900 4600
+$EndSCHEMATC
